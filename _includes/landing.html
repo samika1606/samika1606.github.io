@@ -5,13 +5,9 @@ title: Plots
 
 <div class="container p-4">
   <h2>Plot 1</h2>
-  <div id="plot1"></div>
+  <vegachart schema-url="{{ '/assets/json/plot1.json' | relative_url }}" style="width: 100%"></vegachart>
 
   <h2>Plot 2</h2>
-  <div id="plot2"></div>
+  <vegachart schema-url="{{ '/assets/json/plot2.json' | relative_url }}" style="width: 100%"></vegachart>
 </div>
 
-<script>
-  vegaEmbed('#plot1', '{{ "/assets/json/plot1.json" | relative_url }}');
-  vegaEmbed('#plot2', '{{ "/assets/json/plot2.json" | relative_url }}');
-</script>
