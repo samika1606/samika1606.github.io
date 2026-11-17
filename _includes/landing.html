@@ -1,10 +1,20 @@
-
-
 <div class="container p-4">
   <h2>Plot 1</h2>
   <vegachart schema-url="{{ '/assets/json/plot1.json' | relative_url }}" style="width: 100%"></vegachart>
+  <p>
+    This first chart shows how many state government facilities are located in Illinois using the Illinois state owned buildings dataset. 
+    The counties are sorted from most to fewest facilities. The x-axis shows the number of facilities as a quantitative (Q) variable, and the y-axis shows County as a nominal (N) variable, since county names are categories with no specfic order. 
+    I put counties on the y-axis and sorted the bars by facility count. The bars are also colored by facility count, as a quantitative variable. I chose that  the count runs from low to high so light-to-dark colors makes more sense. 
+    The dataset has one row per building. That gave one row per county, which is what the chart plots.
+  </p>
 
   <h2>Plot 2</h2>
   <vegachart schema-url="{{ '/assets/json/plot2.json' | relative_url }}" style="width: 100%"></vegachart>
+  <p>
+    This chart shows the average size, in square feet, for state buildings for each type of building use for a specific single county chosen from the dropdown. 
+    The line marks the selected county's overall average building size, so you can see what kinds of buildings are larger or smaller. Average square footage is on the x-axis as a quantitative (Q) variable, 
+    and building use Usage Description is on the y-axis as a nominal (N) variable. The bars are colored by average square footage, with a scale from light to dark. 
+    In Python, I dropped missing county values and built a sorted list of the county names for the dropdown. I also turned off Altair's 5,000 row limit with alt.data_transformers.disable_max_rows() so the full dataset could be included. 
+    Plot 2 has a dropdown menu that filters the chart to one county at a time, starting with the default being Champaign. 
+  </p>
 </div>
-
